@@ -41,3 +41,8 @@ docker rm -f $(docker ps -a -q --filter "name=jenkins") ;
 docker rm -f $(docker ps -a -q --filter "name=git-server") ;
 docker-compose up -d 
 ```
+#### initial jenkins
+- get init password from docker log
+```
+docker logs -f jenkins
+```
