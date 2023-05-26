@@ -1,6 +1,7 @@
 # Devops server
  - docker
  - docker-compose
+ - git
  - jenkins
  - gitlab
  - kong
@@ -17,6 +18,12 @@ sudo usermod -aG docker jenkins
 ```
  curl -SL https://github.com/docker/compose/releases/download/v2.18.1/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose
  sudo chmod +x /usr/local/bin/docker-compose
+```
+
+#### git
+```
+sudo yum -y install git
+
 ```
 
 #### jenkins,gitlab,kong
