@@ -2,20 +2,20 @@ version: '3'
 services:
   jenkins:
     container_name: jenkins
-    image: jenkin/docker
+    image: jenkins/docker
     build:
-      context: pipeline     
+      context: pipeline
     ports:
       - "8080:8080"
     volumes:
       - $PWD/jenkins_home:/var/jenkins_home
-      - "var/run/docker.sock:/var/run/docker.sock"
+      - "/var/run/docker.sock:/var/run/docker.sock"
     networks:
       - net
   git:
     container_name: git-server
     image: 'gitlab/gitlab-ce:latest'
-    hostname: '192.168.100.111'
+    hostname: '192.168.100.111' # change, ip of server 
     ports:
       - '80:80'
     volumes:

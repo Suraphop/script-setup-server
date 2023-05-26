@@ -4,7 +4,6 @@
  - git
  - jenkins
  - gitlab
- - kong
 
 #### docker
 ```
@@ -26,10 +25,13 @@ sudo yum -y install git
 
 ```
 
-#### jenkins,gitlab,kong
+#### jenkins,gitlab
 ```
 sudo rm -r readme
 git clone https://github.com/Suraphop/readme.git
 cd readme/devops-server-centos/
+mkdir jenkins_home
+sudo chown 1000:1000 jenkins_home -R
+docker-compose build
 docker-compose up -d
 ```
