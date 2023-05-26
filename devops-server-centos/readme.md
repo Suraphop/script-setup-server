@@ -28,12 +28,12 @@ sudo yum -y install git
 ```
 sudo rm -r readme ;
 git clone https://github.com/Suraphop/readme.git &&
-mkdir jenkins-data &&
+mkdir jenkins-data ;
 cd readme &&
 cp -r devops-server-centos/. ../jenkins-data/ &&
 cd .. &&
 cd jenkins-data &&
-mkdir jenkins_home &&
+mkdir jenkins_home ;
 sudo chown 1000:1000 jenkins_home -R &&
 docker-compose build &&
 docker rmi $(docker images -f "dangling=true" -q) --force && ;
