@@ -6,13 +6,14 @@
  - gitlab
 
 #### docker
+- jenkins (usermod command)  is a user login, can find with whoami
 ```
 sudo yum install -y yum-utils &&
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo &&
 sudo systemctl start docker &&
 sudo usermod -aG docker jenkins 
 ```
-- jenkins  is a user login, can find with whoami
+
 
 #### docker compose
 ```
