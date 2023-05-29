@@ -10,6 +10,7 @@
 ```
 sudo yum install -y yum-utils &&
 sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo &&
+sudo systemctl enable docker.service &&
 sudo systemctl start docker &&
 sudo usermod -aG docker jenkins 
 ```
@@ -45,6 +46,7 @@ docker-compose up -d
 ```
 #### initial jenkins
 - get init password from docker log
+- add plugin: GitLab Plugin
 ```
 docker logs -f jenkins
 ```
