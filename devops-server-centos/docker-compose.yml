@@ -13,15 +13,17 @@ services:
     networks:
       - net
   git:
-    container_name: git-server
+    container_name: gitlab
     image: 'gitlab/gitlab-ce:latest'
     hostname: '192.168.100.111' # change, ip of server 
     ports:
       - '80:80'
+      - '443:443'
+      - '2002:22'
     volumes:
-      - '/srv/gitlab/config:/etc/gitlab'
-      - '/srv/gitlab/logs:/var/log/gitlab'
-      - '/srv/gitlab/data:/var/opt/gitlab'
+      - '$HOME/gitlab/config:/etc/gitlab'
+      - '$HOME/gitlab/logs:/var/log/gitlab'
+      - '$HOME/gitlab/data:/var/opt/gitlab'
     networks:
       - net
 networks:
