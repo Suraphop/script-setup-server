@@ -49,3 +49,9 @@ docker-compose up -d
 ```
 docker logs -f jenkins
 ```
+#### initial gitlab
+- get init password from docker log
+```
+sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+```
+
