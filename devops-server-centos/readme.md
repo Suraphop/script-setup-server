@@ -4,6 +4,8 @@
  - git
  - jenkins
  - gitlab
+ - portainer
+ - uptime-kuma
 
 #### docker
 - jenkins (usermod command)  is a user login, can find with whoami
