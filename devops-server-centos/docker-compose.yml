@@ -8,7 +8,7 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - $PWD/jenkins_home:/var/jenkins_home
+      - $HOME/jenkins_home:/var/jenkins_home
       - "/var/run/docker.sock:/var/run/docker.sock"
     networks:
       - net
@@ -24,6 +24,25 @@ services:
       - '$HOME/gitlab/config:/etc/gitlab'
       - '$HOME/gitlab/logs:/var/log/gitlab'
       - '$HOME/gitlab/data:/var/opt/gitlab'
+    networks:
+      - net
+  portainer:
+    container_name: portainer
+    image: 'portainer/portainer:latest'
+    ports:
+      - ':9100:9000'
+    volumes:
+      -  /var/run/docker.sock:/var/run/docker.sock
+      - '$HOME/portainer:/data'
+    networks:
+      - net
+  uptime-kuma:
+    container_name: uptime-kuma
+    image: 'louislam/uptime-kuma:latest'
+    ports:
+      - '3001:3001'
+    volumes:
+      - '$HOME/uptime-kuma/data:/app/data'
     networks:
       - net
 networks:
