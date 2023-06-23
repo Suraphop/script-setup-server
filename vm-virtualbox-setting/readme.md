@@ -1,4 +1,4 @@
-## install tools on ubuntu 22 in vm virtual
+## Install tools on ubuntu 22 in vm virtual
 
 ### fix ip
 
