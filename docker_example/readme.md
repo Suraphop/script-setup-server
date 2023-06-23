@@ -26,12 +26,12 @@ docker rm <container name>
 
 #### build dockerfile
 ```
-docker build -t python-cron .
+docker build -t <container name> .
 ```
 
 #### run dockerfile
 ```
-docker run -it --rm python-cron
+docker run -it --rm <container name>
 ```
 
 #### run terminal
