@@ -21,7 +21,6 @@ docker run -d --restart unless-stopped -p 1337:1337 --network kong-net --name ko
 ```
 
 #### Ftp server
-# ftp server 
 - edit
   - FTP_USER
   - FTP_PASS
