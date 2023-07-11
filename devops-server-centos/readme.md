@@ -61,4 +61,6 @@ sudo chown 1000:1000 /var/run/docker.sock
 ```
 sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
 ```
+#### enable local domain for webhook
+go to admin area -> setting -> network - outbound requests -> allow requests to the local network
 
