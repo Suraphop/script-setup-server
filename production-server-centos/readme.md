@@ -31,6 +31,10 @@ docker run -d --restart unless-stopped -p 1337:1337 --network kong-net --name ko
 ```
 docker run -d -v $HOME/ftp/data/:/home/vsftpd -p 20:20 -p 21:21 -p 47400-47470:47400-47470 -e FTP_USER=admin -e FTP_PASS=1234 -e PASV_ADDRESS=10.128.16.210 --name ftp --restart=always bogem/ftp
 ```
+edit permission
+```
+sudo chown 1000:1000 $HOME/ftp/data
+```
 
 #### Uptime-kuma
 ```
