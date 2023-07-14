@@ -2,6 +2,7 @@ version: '3'
 services:
   jenkins:
     container_name: jenkins
+    restart: always
     image: jenkins/docker
     build:
       context: pipeline
@@ -15,7 +16,8 @@ services:
   git:
     container_name: gitlab
     image: 'gitlab/gitlab-ce:latest'
-    hostname: '192.168.100.111' # change, ip of server 
+    restart: always
+    hostname: '10.128.16.209' # change, ip of server 
     ports:
       - '80:80'
       - '443:443'
