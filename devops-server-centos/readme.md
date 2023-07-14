@@ -4,8 +4,7 @@
  - git
  - jenkins
  - gitlab
- - portainer
- - uptime-kuma
+
 
 #### docker
 - jenkins (usermod command)  is a user login, can find with whoami
@@ -57,4 +56,3 @@ docker logs -f jenkins
 ```
 sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
 ```
-

@@ -4,6 +4,8 @@
 - docker-compose
 - kong
 - ftp server
+- portainer
+- uptime-kuma
 
 #### kong gateway
 - open kong with http:localhost:8443
@@ -28,4 +30,15 @@ docker run -d --restart unless-stopped -p 1337:1337 --network kong-net --name ko
   - PASV_ADDRESS
 ```
 docker run -d -v /home/gitlab/data/:/home/vsftpd -p 20:20 -p 21:21 -p 47400-47470:47400-47470 -e FTP_USER=admin -e FTP_PASS=1234 -e PASV_ADDRESS=192.168.100.73 --name ftp --restart=always bogem/ftp
+```
+
+#### Uptime-kuma
+```
+docker run -d --restart=always -p 3001:3001 -v $HOME/uptime-kuma/data:/app/data --name uptime-kuma louislam/uptime-kuma:latest
+```
+
+#### Portainer
+```
+docker run -d -p 9000:9000 --name=portainer --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/portainer:/data portainer/portainer:latest
+
 ```
