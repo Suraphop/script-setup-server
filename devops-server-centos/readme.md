@@ -51,8 +51,16 @@ docker-compose up -d
 ```
 docker logs -f jenkins
 ```
+#### add permission docker in jenkins container
+```
+sudo chown 1000:1000 /var/run/docker.sock
+```
 #### initial gitlab
 - get init password from docker log
 ```
 sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
+<<<<<<< HEAD
 ```
+#### enable local domain for webhook
+go to admin area -> setting -> network - outbound requests -> allow requests to the local network
+
