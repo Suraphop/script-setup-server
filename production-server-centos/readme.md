@@ -29,7 +29,7 @@ docker run -d --restart unless-stopped -p 1337:1337 --network kong-net --name ko
   - FTP_PASS
   - PASV_ADDRESS
 ```
-docker run -d -v /home/gitlab/data/:/home/vsftpd -p 20:20 -p 21:21 -p 47400-47470:47400-47470 -e FTP_USER=admin -e FTP_PASS=1234 -e PASV_ADDRESS=192.168.100.73 --name ftp --restart=always bogem/ftp
+docker run -d -v $HOME/ftp/data/:/home/vsftpd -p 20:20 -p 21:21 -p 47400-47470:47400-47470 -e FTP_USER=admin -e FTP_PASS=1234 -e PASV_ADDRESS=10.128.16.210 --name ftp --restart=always bogem/ftp
 ```
 
 #### Uptime-kuma
