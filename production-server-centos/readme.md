@@ -44,5 +44,9 @@ docker run -d --restart=always -p 3001:3001 -v $HOME/uptime-kuma/data:/app/data 
 #### Portainer
 ```
 docker run -d -p 9000:9000 --name=portainer --restart=unless-stopped -v /var/run/docker.sock:/var/run/docker.sock -v $HOME/portainer:/data portainer/portainer:latest
+```
 
+#### Nodered
+```
+docker run -it -p 1880:1880 -v $HOME/node_red_data:/data --name mynodered nodered/node-red:latest
 ```
