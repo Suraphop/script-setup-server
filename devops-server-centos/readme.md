@@ -64,3 +64,9 @@ sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
 #### enable local domain for webhook
 go to admin area -> setting -> network - outbound requests -> allow requests to the local network
 
+#### gpathed (rocky linux)
+```
+sudo dnf update
+sudo dnf install epel-release
+sudo dnf install gparted
+```
