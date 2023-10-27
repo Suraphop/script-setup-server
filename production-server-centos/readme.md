@@ -34,6 +34,8 @@ docker run -d -v $HOME/ftp/data/:/home/vsftpd -p 20:20 -p 21:21 -p 47400-47470:4
 edit permission
 ```
 sudo chown 1000:1000 $HOME/ftp/data
+chmod o=wxr data_mcstatus
+chmod o=wxr data_alarmlist
 ```
 
 #### Uptime-kuma
