@@ -29,6 +29,7 @@ sudo yum -y install git
 ```
 
 #### jenkins,gitlab
+- edit gitlab ip in docker-compose file
 ```
 sudo rm -r readme ;
 git clone https://github.com/Suraphop/readme.git &&
@@ -51,15 +52,20 @@ docker-compose up -d
 ```
 docker logs -f jenkins
 ```
-#### add permission docker in jenkins container
+#### add permission docker for jenkins
 ```
 sudo chown 1000:1000 /var/run/docker.sock
 ```
+
+#### add plugin's jenkins
+```
+manage jenkins -> plugins -> available plugins - > search "gitlab" -> install named "Gitlab"
+```
+
 #### initial gitlab
 - get init password from docker log
 ```
 sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
-<<<<<<< HEAD
 ```
 #### enable local domain for webhook
 go to admin area -> setting -> network - outbound requests -> allow requests to the local network
