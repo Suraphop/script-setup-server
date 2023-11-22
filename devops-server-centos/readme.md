@@ -67,6 +67,16 @@ manage jenkins -> plugins -> available plugins - > search "gitlab" -> install na
 ```
 sudo docker exec -it gitlab grep 'Password:' /etc/gitlab/initial_root_password
 ```
+
+#### edit root password
+```
+admin account -> Preferences -> Password
+```
+#### Add a new user
+```
+Search or go to -> admin area -> User -> new user
+```
+
 #### enable local domain for webhook
 go to admin area -> setting -> network - outbound requests -> allow requests to the local network
 
