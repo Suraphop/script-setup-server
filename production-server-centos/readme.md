@@ -10,6 +10,10 @@
 #### kong gateway
 - open kong with http:localhost:8443
 - kong api gateway with http://localhost:8001
+- konga http://localhost:1337
+- first config
+    - name : kong
+    - host : http://192.168.100.95:8001
 ```
 docker network create kong-net
 docker run -d --restart unless-stopped --name kong-database --network=kong-net -p 5432:5432 -e "POSTGRES_USER=kong" -e "POSTGRES_DB=kong" -e "POSTGRES_PASSWORD=kongpass" postgres:13
